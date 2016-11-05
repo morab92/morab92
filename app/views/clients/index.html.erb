@@ -1,0 +1,38 @@
+<h2> Lisitng CLients</h2>
+
+<p> total clients : <%= @clients.size %> </p>
+<!--new-cient_path will return a string "/clients/new" -->
+
+<%= link_to "Add Client",new_client_path %>
+
+<ol>
+
+<ol>
+<% @clients.each do |client| %>
+<li>
+<%= link_to client.name, client_path(client) %>
+ <%= link_to "Show",client_path(client.id)%>
+
+</li>
+
+
+<% end %>
+
+
+</ol>
+
+
+<% data = {} %>
+
+<% @clients.each do|client| %>
+
+<% data[client.name] = client.projects.size %>
+
+<% end %>
+
+
+<%= bar_chart(data) %>
+
+
+
+

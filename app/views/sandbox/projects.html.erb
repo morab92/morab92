@@ -1,0 +1,12 @@
+<h1>Sandbox#projects</h1>
+<p>Find me in app/views/sandbox/projects.html.erb</p>
+
+<h2> Listing Projects </h2>
+
+<p> total projects found : <%= @projects.size %> </p>
+
+<ol>
+<% @projects.each do |project| %>
+<li> <%= project.name %>  <%= project.order('start_date') %></li> 
+<% end %>
+</ol>

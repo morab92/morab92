@@ -1,0 +1,29 @@
+<h1>Sandbox#products</h1>
+<p>Find me in app/views/sandbox/products.html.erb</p>
+
+
+<h2>listing products based on category -------------> </h2>
+<ol>
+<li><%= products_size.all%></li>
+</ol>
+
+
+<h2> products categorised based on prize that belongs to the category of less than or equal to seventy</h2>
+<ol>
+ <li><%= products_price.all%></li>
+</ol>
+<h2>products that are available</h2>
+<ol>
+<li>><%=products_availabality.all%></li>
+</ol>
+
+
+
+
+<h2>total worth of products is</h2>
+<ol>
+<li><%= product.sum(price)%></li>
+</ol>
+
+
+

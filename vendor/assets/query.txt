@@ -1,0 +1,24 @@
+Modelname.all
+
+
+returns all the  roes from the table,converted to an array of objects
+
+rails console ---->
+
+clients = Client.all
+
+clients.each do|client|
+puts client.name
+end
+
+puts "there are totally #{clients.size}""
+
+-------------------------------------------------------------------------------------------------
+Modelname.find(id)
+
+finds the record whose id matches id, returns an object if the record is found else a record not found exception is raised
+
+	
+client = Client.find(3)
+
+puts client.names
